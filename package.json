@@ -1,0 +1,9 @@
+{
+  "name": "",
+  "version": "0.1.0",
+  "description": "Extract comments from source files and do something",
+  "main": "index.js",
+  "dependencies": {
+    "multilang-extract-comments": "^0.3.0"
+  }
+}
