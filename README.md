@@ -1,4 +1,4 @@
-# probeurre
+# probeurre-extracter
 
 **probeurre** shows statistics about comments on git repositories.
 
