@@ -33,5 +33,5 @@ FILES=`find -type f -not -path './.git/*' -print0 | tr '\0' ' '`
 cd -
 
 # send to parser
-node index.js "$WORKDIR" $FILES > "$WORKDIR/extracted.json"
+nodejs index.js "$WORKDIR" $FILES > "$WORKDIR/extracted.json"
 

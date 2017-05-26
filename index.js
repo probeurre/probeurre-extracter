@@ -12,18 +12,24 @@ var output = {};
 
 for (var i = 0; i < urls.length; i++) {
   var filename = urls[i];
-  var path = workdir + "/" + filename;
+  var path = workdir + "repo/" + filename;
   if (!fs.existsSync(path))
 	  continue;
   // we use sync so we can get them all toghether
   var data = fs.readFileSync(path, 'utf8');
   
-  // this is stupid, it want the object in this format
-  var pattern = { pattern: commentPattern(filename) };
-  // extract comments to json
-  var report = commentExtract(data, pattern);
+  var pattern;
+  var report;
+  try {
+	  // this is stupid, it want the object in this format
+	  pattern = { pattern: commentPattern(filename) };
+	  // extract comments to json
+	  report = commentExtract(data, pattern);
   
-  output[filename] = report;
+	output[filename] = report;
+  } catch (e) {
+	  continue;
+  }
 }
 
 console.log(JSON.stringify(output));
