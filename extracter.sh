@@ -20,7 +20,7 @@ esac
 shift # past argument or value
 done
 
-WORKDIR="/probeurre-data/$WORKDIR/"
+WORKDIR="/probeurre-data/$WORKDIR"
 
 cd "$WORKDIR/repo"
 

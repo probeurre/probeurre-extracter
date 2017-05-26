@@ -12,7 +12,7 @@ var output = {};
 
 for (var i = 0; i < urls.length; i++) {
   var filename = urls[i];
-  var path = workdir + "repo/" + filename;
+  var path = workdir + "/repo/" + filename;
   if (!fs.existsSync(path))
 	  continue;
   // we use sync so we can get them all toghether
