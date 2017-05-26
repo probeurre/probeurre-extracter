@@ -4,7 +4,7 @@ while [[ $# -gt 1 ]]
 do
 key="$1"
 
-case $key in
+case $key in 
     -w|--workdir)
     WORKDIR="$2"
     shift # past argument
